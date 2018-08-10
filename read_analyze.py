@@ -1,10 +1,10 @@
 import PyPDF2, os
 # Get all the PDF filenames.
 pdfFiles = []
-for filename in os.listdir('pdfs/'):
+for filename in os.listdir('pdfs/'): #pdfs/ is the path of the directory - replace as appropriate
     if filename.endswith('.pdf'):
         pdfFiles.append('pdfs/'+filename)
-wordToFind = 'surveillance'      
+wordToFind = 'surveillance'      #the text we want to find
     # Loop through all the PDF files.
 for filename in pdfFiles:
     foundTheWord = False
@@ -22,6 +22,5 @@ for filename in pdfFiles:
         except:
             error = "Error"
     if foundTheWord == True:
-        print('Found in:'+filename)
+        print('Found in:'+filename) #display the name of the file where the text was found
 
-#len(pdfFiles)
